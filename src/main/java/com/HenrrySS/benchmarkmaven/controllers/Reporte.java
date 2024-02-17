@@ -122,15 +122,15 @@ public class Reporte {
         
         // rendimiento en segundos
 
-        java.text.DecimalFormat formatoSalidaDecimal = new java.text.DecimalFormat("0.000");//para dos decimales
+        java.text.DecimalFormat formatoSalidaDecimal = new java.text.DecimalFormat("0.00");//para dos decimales
 
-        float tiemposecqs = tiempoQuicksort / 1000;// tiempo en segundos quicksort
-        this.frame.jLabel80.setText(Float.toString(tiemposecqs));
-        float tiemposecmul = tiempoMultiplicacion / 1000;// tiempo en segundos multiplicacion
-        this.frame.jLabel81.setText(Float.toString(tiemposecmul));
-        float tiemposecper = tiempoPermutacion / 1000;// tiempo en segundos permutaciones
-        this.frame.jLabel82.setText(Float.toString(tiemposecper));
-        float tiemposeceras = (tiempoCriba / 1000);// tiempo en segundos criba de erastotenes
+        float tiemposecqs = (float)tiempoQuicksort / 1000;// tiempo en segundos quicksort
+        this.frame.jLabel80.setText(formatoSalidaDecimal.format(tiemposecqs));
+        float tiemposecmul = (float)tiempoMultiplicacion / 1000;// tiempo en segundos multiplicacion
+        this.frame.jLabel81.setText(formatoSalidaDecimal.format(tiemposecmul));
+        float tiemposecper = (float)tiempoPermutacion / 1000;// tiempo en segundos permutaciones
+        this.frame.jLabel82.setText(formatoSalidaDecimal.format(tiemposecper));
+        float tiemposeceras = (float)tiempoCriba / 1000;// tiempo en segundos criba de erastotenes
         this.frame.jLabel83.setText(formatoSalidaDecimal.format(tiemposeceras));
 
         this.frame.jLabel84.setText(Float.toString(tiemposecqs + tiemposecmul + tiemposecper + tiemposeceras));

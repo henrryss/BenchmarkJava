@@ -51,7 +51,7 @@ public class JDProductoMatrices extends javax.swing.JDialog {
         jPanel2 = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        insertElemTabla2 = new javax.swing.JButton();
+        btnInsertElemTabla2 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable4 = new javax.swing.JTable();
         jLabel9 = new javax.swing.JLabel();
@@ -176,10 +176,10 @@ public class JDProductoMatrices extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        insertElemTabla2.setText("Insertar Elementos");
-        insertElemTabla2.addActionListener(new java.awt.event.ActionListener() {
+        btnInsertElemTabla2.setText("Insertar Elementos");
+        btnInsertElemTabla2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                insertElemTabla2ActionPerformed(evt);
+                btnInsertElemTabla2ActionPerformed(evt);
             }
         });
 
@@ -219,7 +219,7 @@ public class JDProductoMatrices extends javax.swing.JDialog {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(insertElemTabla2)
+                    .addComponent(btnInsertElemTabla2)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -228,7 +228,7 @@ public class JDProductoMatrices extends javax.swing.JDialog {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(insertElemTabla2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnInsertElemTabla2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(97, 97, 97)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -401,9 +401,9 @@ public class JDProductoMatrices extends javax.swing.JDialog {
         
     }//GEN-LAST:event_btnInsertElemTabla1ActionPerformed
 
-    private void insertElemTabla2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertElemTabla2ActionPerformed
+    private void btnInsertElemTabla2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertElemTabla2ActionPerformed
         
-    }//GEN-LAST:event_insertElemTabla2ActionPerformed
+    }//GEN-LAST:event_btnInsertElemTabla2ActionPerformed
 
     private void btnMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicarActionPerformed
         
@@ -454,8 +454,8 @@ public class JDProductoMatrices extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnInsertElemTabla1;
+    public javax.swing.JButton btnInsertElemTabla2;
     public javax.swing.JButton btnMultiplicar;
-    public javax.swing.JButton insertElemTabla2;
     public javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel4;

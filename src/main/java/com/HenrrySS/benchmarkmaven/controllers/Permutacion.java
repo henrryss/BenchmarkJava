@@ -20,50 +20,53 @@ import javax.swing.JTable;
 public class Permutacion {
 
     private JDPermutaciones frame;
-    private Object[] elementos = new Object[7];
+    private FRMBenchmark bk;
+    private Object[] elementos;
     public static long tiempoPermutacion;
     private ArrayList<Object> permut = new ArrayList();
 
     public Permutacion(FRMBenchmark framePrincipal, JDPermutaciones frameVista) {
-        FRMBenchmark bk = framePrincipal;
+        
+        bk = framePrincipal;
         this.frame = frameVista;
         InicializarValores();
         this.frame.btnpermutar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                long t1, t2;// variables para calcular el tiempo
-                t1 = System.currentTimeMillis(); // inicio del tiempo
-
-                int n = 8; //tipos para escoger
-                int r = elementos.length; // numero de elementos
-
-                // invocamos al metodo permutar
-                // pasando como parametro los elemntos, un espacio en blanco, los tipos a escoger y numero de elementos
-                // lisamos todas las permutaciones para mostrar en la aplicacion
-                Permutar(elementos, "", n, r);
-
-                // visualizamos en la tabla de permutaciones
-                Object permutaciones[] = permut.toArray();
-                VisualizarJTable(permutaciones, frame.jTabPermutaciones, frame.jScrollPane7);
-
-                //finaliza el tiempo de ejecion
-                t2 = System.currentTimeMillis();
-                // calculamos la diferencia
-                tiempoPermutacion = (t2 - t1);
-
-                frame.txtcantper.setText(Integer.toString(permut.size()));
-                frame.txtiempoPermut.setText(Float.toString(tiempoPermutacion));
-
-                //reporte();
-                frame.btnpermutar.setEnabled(false);
-                bk.btnPermutaciones.setEnabled(false);
-                bk.lblCheckPermutaciones.setEnabled(true);
-
+                clickButtonPermutar(e);
             }
-
         });
+    }
 
+    private void clickButtonPermutar(ActionEvent e) {
+        long t1, t2;// variables para calcular el tiempo
+        t1 = System.currentTimeMillis(); // inicio del tiempo
+
+        int n = 8; //tipos para escoger
+        int r = elementos.length; // numero de elementos
+
+        // invocamos al metodo permutar
+        // pasando como parametro los elemntos, un espacio en blanco, los tipos a escoger y numero de elementos
+        // lisamos todas las permutaciones para mostrar en la aplicacion
+        Permutar(elementos, "", n, r);
+
+        // visualizamos en la tabla de permutaciones
+        Object permutaciones[] = permut.toArray();
+        VisualizarJTable(permutaciones, frame.jTabPermutaciones, frame.jScrollPane7);
+
+        //finaliza el tiempo de ejecion
+        t2 = System.currentTimeMillis();
+        // calculamos la diferencia
+        tiempoPermutacion = (t2 - t1);
+
+        frame.txtcantper.setText(Integer.toString(permut.size()));
+        frame.txtiempoPermut.setText(Long.toString(tiempoPermutacion));
+
+        //reporte();
+        frame.btnpermutar.setEnabled(false);
+        bk.btnPermutaciones.setEnabled(false);
+        bk.lblCheckPermutaciones.setEnabled(true);
     }
 
     private void Permutar(Object[] elementos, String act, int n, int r) {
@@ -84,7 +87,7 @@ public class Permutacion {
 
     private void InicializarValores() {
 
-        elementos = new Object[]{"A", "B", "C", "D", "E", "F", "G","H"};
+        elementos = new Object[]{"A", "B", "C", "D", "E", "F", "G", "H"};
 
         VisualizarJTable(elementos, this.frame.jTabElementos, this.frame.jScrollPane4);
     }

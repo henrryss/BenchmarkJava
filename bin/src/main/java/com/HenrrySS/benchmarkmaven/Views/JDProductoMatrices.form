@@ -235,7 +235,7 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="2" attributes="0">
-                      <Component id="btnInsertElemTabla2" alignment="2" min="-2" max="-2" attributes="0"/>
+                      <Component id="insertElemTabla2" alignment="2" min="-2" max="-2" attributes="0"/>
                       <Component id="jScrollPane2" alignment="2" min="-2" pref="514" max="-2" attributes="0"/>
                       <Component id="jLabel9" alignment="2" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -247,7 +247,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btnInsertElemTabla2" min="-2" pref="41" max="-2" attributes="0"/>
+                  <Component id="insertElemTabla2" min="-2" pref="41" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
                   <Component id="jScrollPane2" min="-2" pref="113" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -258,12 +258,12 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="btnInsertElemTabla2">
+        <Component class="javax.swing.JButton" name="insertElemTabla2">
           <Properties>
             <Property name="text" type="java.lang.String" value="Insertar Elementos"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInsertElemTabla2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="insertElemTabla2ActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

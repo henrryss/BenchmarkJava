@@ -31,105 +31,108 @@ import javax.swing.JTable;
 public class ProductoMatrices {
 
     private JDProductoMatrices frame;
+    private FRMBenchmark bk;
     private Random rmd;
     private int[][] arreglo1, arreglo2;
     public static long tiempoMultiplicacion;
 
     public ProductoMatrices(FRMBenchmark benchmark, JDProductoMatrices jDProductoMatrices) {
-        FRMBenchmark bk = benchmark;
+        this.bk = benchmark;
         this.frame = jDProductoMatrices;
 
         //evento del boton insertar elementos en matriz 20x5
         frame.btnInsertElemTabla1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                arreglo1 = new int[20][5];
-                rmd = new Random();
-                for (int i = 0; i < arreglo1.length; i++) {
-                    for (int j = 0; j < arreglo1[i].length; j++) {
-                        arreglo1[i][j] = rmd.nextInt(16);// llenamos el arreglo con numeros aleatorios de 0 a 100
-                    }
-                }
-
-                //visualizamos en pantalla el arreglo
-                InsertEnJtable(arreglo1, frame.jTable3, frame.jScrollPane1);
-                frame.jLabel8.setVisible(true);
-                frame.btnInsertElemTabla1.setEnabled(false);
-                if (!frame.insertElemTabla2.isEnabled()) {
-                    frame.btnMultiplicar.setEnabled(true);
-                }
+                clickButtonMultiplicando(e);
             }
-
         });
 
-        frame.insertElemTabla2.addActionListener(new ActionListener() {
+        frame.btnInsertElemTabla2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                arreglo2 = new int[5][20];
-                rmd = new Random();
-                for (int i = 0; i < arreglo2.length; i++) {
-                    for (int j = 0; j < arreglo2[i].length; j++) {
-                        arreglo2[i][j] = rmd.nextInt(16);// llenamos el arreglo con numeros aleatorios de 0 a 100
-                    }
-                }
-
-                InsertEnJtable(arreglo2, frame.jTable4, frame.jScrollPane2);
-
-                frame.jLabel9.setVisible(true);
-                frame.insertElemTabla2.setEnabled(false);
-                if (!frame.btnInsertElemTabla1.isEnabled()) {
-                    frame.btnMultiplicar.setEnabled(true);
-                }
+                clickButtonMultiplicador(e);
             }
-
         });
 
         frame.btnMultiplicar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                long t1, t2;//variable para calcular el tiempo
-
-                t1 = System.currentTimeMillis();// capturamos el tiempo inicial
-                /*
-                int arreglo1[][] = new int[20][5];
-                int arreglo2[][] = new int[5][20];
-
-                // insertamos los datos en cada arreglo que ya fueron llenados aleatoriamente
-                for (int i = 0; i < arreglo1.length; i++) {
-                    for (int j = 0; j < arreglo1[i].length; j++) {
-                        arreglo1[i][j] = (int) jTable3.getValueAt(i, j);
-                    }
-                }
-                for (int i = 0; i < arreglo2.length; i++) {
-                    for (int j = 0; j < arreglo2[i].length; j++) {
-                        arreglo2[i][j] = (int) jTable4.getValueAt(i, j);
-                    }
-                }
-                 */
-                // obtenemos la matriz producto con el metodo productoArreglo
-                // Se pasa como parametro los dos arreglos anteriores
-                int producto[][] = productoArreglos(arreglo1, arreglo2);
-
-                //visualizar tabla en pantalla
-                InsertEnJtable(producto, frame.jTable5, frame.jScrollPane3);
-
-                frame.jLabel10.setVisible(true);
-
-                //finaliza la ejecuion de la multiplicaion de arreglos
-                t2 = System.currentTimeMillis();
-
-                // tiempo total
-                tiempoMultiplicacion = (t2 - t1);
-                frame.txtTiempoProd.setText(Float.toString(tiempoMultiplicacion));
-                frame.btnMultiplicar.setEnabled(false);
-
-                bk.btnMultiplicacion.setEnabled(false);
-                bk.lblCheckMultiplicacion.setEnabled(true);
-                // reporte();
-
+                clickButtonProducto(e);
             }
-
         });
+    }
+
+    private void clickButtonMultiplicando(ActionEvent e) {
+        long t1, t2;//variable para calcular el tiempo
+
+        t1 = System.currentTimeMillis();// capturamos el tiempo inicial
+        arreglo1 = new int[20][5];
+        rmd = new Random();
+        for (int i = 0; i < arreglo1.length; i++) {
+            for (int j = 0; j < arreglo1[i].length; j++) {
+                arreglo1[i][j] = rmd.nextInt(16);// llenamos el arreglo con numeros aleatorios de 0 a 100
+            }
+        }
+
+        //visualizamos en pantalla el arreglo
+        InsertEnJtable(arreglo1, frame.jTable3, frame.jScrollPane1);
+        frame.jLabel8.setVisible(true);
+        frame.btnInsertElemTabla1.setEnabled(false);
+        verificarBotones();
+        //finaliza la ejecuion de la multiplicaion de arreglos
+        t2 = System.currentTimeMillis();
+
+        // tiempo total
+        tiempoMultiplicacion += (t2 - t1);
+    }
+
+    private void clickButtonMultiplicador(ActionEvent e) {
+        long t1, t2;//variable para calcular el tiempo
+
+        t1 = System.currentTimeMillis();// capturamos el tiempo inicial
+        arreglo2 = new int[5][20];
+        rmd = new Random();
+        for (int i = 0; i < arreglo2.length; i++) {
+            for (int j = 0; j < arreglo2[i].length; j++) {
+                arreglo2[i][j] = rmd.nextInt(16);// llenamos el arreglo con numeros aleatorios de 0 a 100
+            }
+        }
+
+        InsertEnJtable(arreglo2, frame.jTable4, frame.jScrollPane2);
+
+        frame.jLabel9.setVisible(true);
+        frame.btnInsertElemTabla2.setEnabled(false);
+        verificarBotones();
+        //finaliza la ejecuion de la multiplicaion de arreglos
+        t2 = System.currentTimeMillis();
+
+        // tiempo total
+        tiempoMultiplicacion += (t2 - t1);
+    }
+
+    private void clickButtonProducto(ActionEvent e) {
+        long t1, t2;//variable para calcular el tiempo
+
+        t1 = System.currentTimeMillis();// capturamos el tiempo inicial
+
+        int producto[][] = productoArreglos(arreglo1, arreglo2);
+
+        //visualizar tabla en pantalla
+        InsertEnJtable(producto, frame.jTable5, frame.jScrollPane3);
+
+        frame.jLabel10.setVisible(true);
+
+        //finaliza la ejecuion de la multiplicaion de arreglos
+        t2 = System.currentTimeMillis();
+
+        // tiempo total
+        tiempoMultiplicacion += (t2 - t1);
+        frame.txtTiempoProd.setText(Long.toString(tiempoMultiplicacion));
+        frame.btnMultiplicar.setEnabled(false);
+
+        bk.btnMultiplicacion.setEnabled(false);
+        bk.lblCheckMultiplicacion.setEnabled(true);
     }
 
     private void InsertEnJtable(int[][] array, JTable jTable, JScrollPane jScrollPane) {
@@ -195,5 +198,13 @@ public class ProductoMatrices {
         }
 
         return multiplicacion;
+    }
+
+    private void verificarBotones() {
+        if (frame.btnInsertElemTabla1.isEnabled()==false & frame.btnInsertElemTabla2.isEnabled()==false) {
+            frame.btnMultiplicar.setEnabled(true);
+        } else {
+            frame.btnMultiplicar.setEnabled(false);
+        }
     }
 }

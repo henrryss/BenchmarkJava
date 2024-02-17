@@ -31,61 +31,20 @@ import javax.swing.JTable;
 public class CribaEratostenes {
 
     private JDCribaEratostenes frame;
+    private FRMBenchmark bk;
     private Integer dataCriba[][] = new Integer[625][16];
     public static long tiempoCriba;
 
     public CribaEratostenes(FRMBenchmark framePrincipal, JDCribaEratostenes frameVista) {
-        FRMBenchmark bk = framePrincipal;
+        bk = framePrincipal;
         this.frame = frameVista;
         InicializarElementosCriba();
         this.frame.btnejcutarcriba.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                long t1, t2;// variables para calcular el tiempo
-                t1 = System.currentTimeMillis();// capturamos el tiempo al inicio de la ejecucion
-                ArrayList<Object> listaPrimos = new ArrayList();//para obtner lista de primos
-
-                //para anular los elementos, asignamos los multiplos a un valor 0
-                for (int i = 0; i < dataCriba.length; i++) { // Bucle para buscar elemento desde la primero fila
-                    for (int j = 0; j < dataCriba[i].length; j++) {// Bucle para buscar elemento desde la primero columna
-
-                        if (Math.pow(dataCriba[i][j], 2) > 10000) {// si el numero elevedao al cuadrado es mayor que 10000
-                            if (dataCriba[i][j] != 0) {
-                                listaPrimos.add(dataCriba[i][j]); // listamos todos los numeros restantes
-                            }
-                        } else {
-                            if (dataCriba[i][j] != 0) {
-                                listaPrimos.add(dataCriba[i][j]);// listamos los numeros que se encuentras sin anular
-                                for (int k = i; k < dataCriba.length; k++) {
-                                    for (int l = 0; l < dataCriba[i].length; l++) {
-                                        if (dataCriba[k][l] > dataCriba[i][j]) {
-                                            if (dataCriba[k][l] % dataCriba[i][j] == 0) {
-                                                dataCriba[k][l] = 0;// recorremos nuevamente el array para hallar los multiplos de los numeros
-                                            }
-
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                    }
-                    // visualizacion en pantalla de las tablas
-                    cargarTablaCriba();
-                    cargarListaPrimos(listaPrimos);
-                }
-                // capturamos el final de la ejecucion
-                t2 = System.currentTimeMillis();
-                tiempoCriba = t2 - t1; // total del tiempo sera la diferencia entr fin e inicio
-                frame.txtiempoCriba.setText(Float.toString(tiempoCriba));
-
-                // reporte();
-                frame.btnejcutarcriba.setEnabled(false);
-                bk.btnCriba.setEnabled(false);
-                bk.lblCheckCriba.setEnabled(true);
+                clickButtonEjecutar(e);
 
             }
-
         });
     }
 
@@ -104,6 +63,51 @@ public class CribaEratostenes {
 
         VisualizarJTable((Object[][]) dataCriba, frame.jTable9, frame.jScrollPane10);
 
+    }
+
+    private void clickButtonEjecutar(ActionEvent e) {
+        long t1, t2;// variables para calcular el tiempo
+        t1 = System.currentTimeMillis();// capturamos el tiempo al inicio de la ejecucion
+        ArrayList<Object> listaPrimos = new ArrayList();//para obtner lista de primos
+
+        //para anular los elementos, asignamos los multiplos a un valor 0
+        for (int i = 0; i < dataCriba.length; i++) { // Bucle para buscar elemento desde la primero fila
+            for (int j = 0; j < dataCriba[i].length; j++) {// Bucle para buscar elemento desde la primero columna
+
+                if (Math.pow(dataCriba[i][j], 2) > 10000) {// si el numero elevedao al cuadrado es mayor que 10000
+                    if (dataCriba[i][j] != 0) {
+                        listaPrimos.add(dataCriba[i][j]); // listamos todos los numeros restantes
+                    }
+                } else {
+                    if (dataCriba[i][j] != 0) {
+                        listaPrimos.add(dataCriba[i][j]);// listamos los numeros que se encuentras sin anular
+                        for (int k = i; k < dataCriba.length; k++) {
+                            for (int l = 0; l < dataCriba[i].length; l++) {
+                                if (dataCriba[k][l] > dataCriba[i][j]) {
+                                    if (dataCriba[k][l] % dataCriba[i][j] == 0) {
+                                        dataCriba[k][l] = 0;// recorremos nuevamente el array para hallar los multiplos de los numeros
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+            // visualizacion en pantalla de las tablas
+            cargarTablaCriba();
+            cargarListaPrimos(listaPrimos);
+        }
+        // capturamos el final de la ejecucion
+        t2 = System.currentTimeMillis();
+        tiempoCriba = t2 - t1; // total del tiempo sera la diferencia entr fin e inicio
+        frame.txtiempoCriba.setText(Long.toString(tiempoCriba));
+
+        // reporte();
+        frame.btnejcutarcriba.setEnabled(false);
+        bk.btnCriba.setEnabled(false);
+        bk.lblCheckCriba.setEnabled(true);
     }
 
     private void VisualizarJTable(Object[][] data, JTable jTable, JScrollPane jScrollPane) {

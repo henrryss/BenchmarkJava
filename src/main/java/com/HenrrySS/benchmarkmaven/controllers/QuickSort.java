@@ -32,72 +32,81 @@ public class QuickSort {
 
     private int[] elementos;
     private JDQuickSort frame;
+    private FRMBenchmark bk;
     public static long tiempoQuicksort;
 
     public QuickSort(FRMBenchmark benchamrk, JDQuickSort frmQuickSort) {
-        
-       FRMBenchmark bk  =  benchamrk;
 
+        bk = benchamrk;
         this.frame = frmQuickSort;
+
         frame.InsertarElemento.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //Cuando se hace click en el boton insertar elementos
-                //insertar los elementos
-                int cantidadElementos = 1000000;
-                elementos = new int[cantidadElementos];
-                Random rdn = new Random(); //valores aleatorios
-                for (int i = 0; i < elementos.length; i++) {
-                    elementos[i] = rdn.nextInt(cantidadElementos * 2);
-                }
-                //llenar la jtable
-                InsertDataInJtable(elementos, frame.jTable1, frame.jScrollPane5);
-                //visualizar los elementos
-                frame.jLabel2.setText("* " + elementos.length + " elementos");
-                frame.jLabel2.setVisible(true);
-                frame.InsertarElemento.setEnabled(false);
-                frame.ordenarQuicksort.setEnabled(true);
+                clickButtonInsert(e);
             }
         });
 
         frame.ordenarQuicksort.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                long t1, t2; // inicializmos las variables que permitiran calcular el tiemp de ejecucion
-
-                t1 = System.currentTimeMillis();// iniciamos el tiempo
-                // capturamos los limites de tiempo
-                int limiteInferior = 0;
-                int limiteSuperior = elementos.length - 1;
-
-                //llamamos al metodo quicksort con 3 parametros
-                int[] dataOrdenada = OrdenamientoQuickSort(elementos, limiteInferior, limiteSuperior);
-
-                // visualizamos en jtable el arreglo ordenado
-                InsertDataInJtable(dataOrdenada, frame.jTable2, frame.jScrollPane6);
-
-                frame.jLabel3.setText("*" + elementos.length + " Elementos ordenados");
-                frame.jLabel3.setVisible(true);
-                frame.ordenarQuicksort.setEnabled(false);
-
-                // fin de la ejecucion
-                t2 = System.currentTimeMillis();
-                // tiempo total
-                tiempoQuicksort = (t2 - t1);
-                frame.txtiempoQuicksort.setText(Float.toString(tiempoQuicksort));
-                
-                bk.lblCheckQuickSort.setEnabled(true);
-                bk.btnQuickSort.setEnabled(false);
-
-                //reporte();
+                clickButtonOrdenar(e);
             }
-
         });
-
-        
     }
 
-    
+    private void clickButtonInsert(ActionEvent e) {
+        long t1, t2; // inicializmos las variables que permitiran calcular el tiemp de ejecucion
+
+        t1 = System.currentTimeMillis();// iniciamos el tiempo
+        //Cuando se hace click en el boton insertar elementos
+        //insertar los elementos
+        int cantidadElementos = 1000000;
+        elementos = new int[cantidadElementos];
+        Random rdn = new Random(); //valores aleatorios
+        for (int i = 0; i < elementos.length; i++) {
+            elementos[i] = rdn.nextInt(cantidadElementos * 2);
+        }
+        //llenar la jtable
+        InsertDataInJtable(elementos, frame.jTable1, frame.jScrollPane5);
+        //visualizar los elementos
+        frame.jLabel2.setText("* " + elementos.length + " elementos");
+        frame.jLabel2.setVisible(true);
+        frame.InsertarElemento.setEnabled(false);
+        frame.ordenarQuicksort.setEnabled(true);
+        // fin de la ejecucion
+        t2 = System.currentTimeMillis();
+        // tiempo total
+        tiempoQuicksort += (t2 - t1);
+    }
+
+    private void clickButtonOrdenar(ActionEvent e) {
+        long t1, t2; // inicializmos las variables que permitiran calcular el tiemp de ejecucion
+
+        t1 = System.currentTimeMillis();// iniciamos el tiempo
+        // capturamos los limites de tiempo
+        int limiteInferior = 0;
+        int limiteSuperior = elementos.length - 1;
+
+        //llamamos al metodo quicksort con 3 parametros
+        int[] dataOrdenada = OrdenamientoQuickSort(elementos, limiteInferior, limiteSuperior);
+
+        // visualizamos en jtable el arreglo ordenado
+        InsertDataInJtable(dataOrdenada, frame.jTable2, frame.jScrollPane6);
+
+        frame.jLabel3.setText("*" + elementos.length + " Elementos ordenados");
+        frame.jLabel3.setVisible(true);
+        frame.ordenarQuicksort.setEnabled(false);
+
+        // fin de la ejecucion
+        t2 = System.currentTimeMillis();
+        // tiempo total
+        tiempoQuicksort = (t2 - t1);
+        frame.txtiempoQuicksort.setText(Long.toString(tiempoQuicksort));
+
+        bk.lblCheckQuickSort.setEnabled(true);
+        bk.btnQuickSort.setEnabled(false);
+    }
 
     private void InsertDataInJtable(int[] arreglo, JTable jTable, JScrollPane jScrollPane) {
 

@@ -131,6 +131,7 @@ public class FRMBenchmark extends javax.swing.JFrame {
         });
 
         btnReporte.setText("Reporte");
+        btnReporte.setEnabled(false);
         btnReporte.setPreferredSize(new java.awt.Dimension(149, 48));
         btnReporte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,18 +142,38 @@ public class FRMBenchmark extends javax.swing.JFrame {
         lblCheckQuickSort.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/HenrrySS/benchmarkmaven/resources/check.png"))); // NOI18N
         lblCheckQuickSort.setLabelFor(btnQuickSort);
         lblCheckQuickSort.setEnabled(false);
+        lblCheckQuickSort.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                lblChangeProperty(evt);
+            }
+        });
 
-        lblCheckMultiplicacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/HenrrySS/benchmarkmaven/resources/check.png"))); // NOI18N
+        lblCheckMultiplicacion.setIcon(new javax.swing.ImageIcon("F:\\HenrrySS\\Descargas\\check.png")); // NOI18N
         lblCheckMultiplicacion.setLabelFor(btnMultiplicacion);
         lblCheckMultiplicacion.setEnabled(false);
+        lblCheckMultiplicacion.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                lblChangeProperty(evt);
+            }
+        });
 
-        lblCheckCriba.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/HenrrySS/benchmarkmaven/resources/check.png"))); // NOI18N
+        lblCheckCriba.setIcon(new javax.swing.ImageIcon("F:\\HenrrySS\\Descargas\\check.png")); // NOI18N
         lblCheckCriba.setLabelFor(btnCriba);
         lblCheckCriba.setEnabled(false);
+        lblCheckCriba.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                lblChangeProperty(evt);
+            }
+        });
 
-        lblCheckPermutaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/HenrrySS/benchmarkmaven/resources/check.png"))); // NOI18N
+        lblCheckPermutaciones.setIcon(new javax.swing.ImageIcon("F:\\HenrrySS\\Descargas\\check.png")); // NOI18N
         lblCheckPermutaciones.setLabelFor(btnPermutaciones);
         lblCheckPermutaciones.setEnabled(false);
+        lblCheckPermutaciones.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                lblChangeProperty(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -269,6 +290,19 @@ public class FRMBenchmark extends javax.swing.JFrame {
         per.setLocationRelativeTo(null);
         per.setVisible(true);
     }//GEN-LAST:event_btnPermutacionesActionPerformed
+
+    private void lblChangeProperty(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_lblChangeProperty
+        if (this.lblCheckQuickSort.isEnabled() == true
+                & this.lblCheckMultiplicacion.isEnabled() == true
+                & this.lblCheckPermutaciones.isEnabled() == true
+                & this.lblCheckCriba.isEnabled() == true) {
+
+            this.btnReporte.setEnabled(true);
+        } else {
+            this.btnReporte.setEnabled(false);
+        }
+
+    }//GEN-LAST:event_lblChangeProperty
 
     /**
      * @param args the command line arguments
