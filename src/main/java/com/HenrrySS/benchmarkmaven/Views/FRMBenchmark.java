@@ -1,5 +1,29 @@
 /*
- * Copyright (C) 2024 henrr
+ * Copyright (C) 202    @Override
+    public int getWidth(ImageObserver observer) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public int getHeight(ImageObserver observer) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public ImageProducer getSource() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public Graphics getGraphics() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public Object getProperty(String name, ImageObserver observer) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+4 henrr
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,7 +45,7 @@ import com.HenrrySS.benchmarkmaven.controllers.Permutacion;
 import com.HenrrySS.benchmarkmaven.controllers.ProductoMatrices;
 import com.HenrrySS.benchmarkmaven.controllers.QuickSort;
 import com.HenrrySS.benchmarkmaven.controllers.Reporte;
-
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -34,6 +58,9 @@ public class FRMBenchmark extends javax.swing.JFrame {
      */
     public FRMBenchmark() {
         initComponents();
+        ImageIcon icon = new ImageIcon(getClass().getResource("/com/HenrrySS/benchmarkmaven/resources/benchmarking.png"));
+        this.setIconImage(icon.getImage());
+        this.setLocationRelativeTo(null);
 
     }
 
@@ -111,19 +138,19 @@ public class FRMBenchmark extends javax.swing.JFrame {
             }
         });
 
-        lblCheckQuickSort.setIcon(new javax.swing.ImageIcon("F:\\HenrrySS\\Descargas\\check.png")); // NOI18N
+        lblCheckQuickSort.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/HenrrySS/benchmarkmaven/resources/check.png"))); // NOI18N
         lblCheckQuickSort.setLabelFor(btnQuickSort);
         lblCheckQuickSort.setEnabled(false);
 
-        lblCheckMultiplicacion.setIcon(new javax.swing.ImageIcon("F:\\HenrrySS\\Descargas\\check.png")); // NOI18N
+        lblCheckMultiplicacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/HenrrySS/benchmarkmaven/resources/check.png"))); // NOI18N
         lblCheckMultiplicacion.setLabelFor(btnMultiplicacion);
         lblCheckMultiplicacion.setEnabled(false);
 
-        lblCheckCriba.setIcon(new javax.swing.ImageIcon("F:\\HenrrySS\\Descargas\\check.png")); // NOI18N
+        lblCheckCriba.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/HenrrySS/benchmarkmaven/resources/check.png"))); // NOI18N
         lblCheckCriba.setLabelFor(btnCriba);
         lblCheckCriba.setEnabled(false);
 
-        lblCheckPermutaciones.setIcon(new javax.swing.ImageIcon("F:\\HenrrySS\\Descargas\\check.png")); // NOI18N
+        lblCheckPermutaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/HenrrySS/benchmarkmaven/resources/check.png"))); // NOI18N
         lblCheckPermutaciones.setLabelFor(btnPermutaciones);
         lblCheckPermutaciones.setEnabled(false);
 
@@ -208,39 +235,39 @@ public class FRMBenchmark extends javax.swing.JFrame {
 
     private void btnReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteActionPerformed
         JDReporte reporte = new JDReporte(this, true);
-                new Reporte(this, reporte);
-                reporte.setLocationRelativeTo(null);
-                reporte.setVisible(true);
+        new Reporte(this, reporte);
+        reporte.setLocationRelativeTo(null);
+        reporte.setVisible(true);
     }//GEN-LAST:event_btnReporteActionPerformed
 
     private void btnQuickSortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuickSortActionPerformed
 
         JDQuickSort jDQuickSort = new JDQuickSort(this, true);
-                new QuickSort(this, jDQuickSort);
-                jDQuickSort.setLocationRelativeTo(null);
-                jDQuickSort.setVisible(true);
+        new QuickSort(this, jDQuickSort);
+        jDQuickSort.setLocationRelativeTo(null);
+        jDQuickSort.setVisible(true);
 
     }//GEN-LAST:event_btnQuickSortActionPerformed
 
     private void btnCribaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCribaActionPerformed
         JDCribaEratostenes criba = new JDCribaEratostenes(this, true);
-                new CribaEratostenes(this, criba);
-                criba.setLocationRelativeTo(null);
-                criba.setVisible(true);
+        new CribaEratostenes(this, criba);
+        criba.setLocationRelativeTo(null);
+        criba.setVisible(true);
     }//GEN-LAST:event_btnCribaActionPerformed
 
     private void btnMultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicacionActionPerformed
-         JDProductoMatrices jDProductoMatrices = new JDProductoMatrices(this, true);
-                new ProductoMatrices(this, jDProductoMatrices);
-                jDProductoMatrices.setLocationRelativeTo(null);
-                jDProductoMatrices.setVisible(true);
+        JDProductoMatrices jDProductoMatrices = new JDProductoMatrices(this, true);
+        new ProductoMatrices(this, jDProductoMatrices);
+        jDProductoMatrices.setLocationRelativeTo(null);
+        jDProductoMatrices.setVisible(true);
     }//GEN-LAST:event_btnMultiplicacionActionPerformed
 
     private void btnPermutacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPermutacionesActionPerformed
         JDPermutaciones per = new JDPermutaciones(this, true);
-                new Permutacion(this, per);
-                per.setLocationRelativeTo(null);
-                per.setVisible(true);
+        new Permutacion(this, per);
+        per.setLocationRelativeTo(null);
+        per.setVisible(true);
     }//GEN-LAST:event_btnPermutacionesActionPerformed
 
     /**
