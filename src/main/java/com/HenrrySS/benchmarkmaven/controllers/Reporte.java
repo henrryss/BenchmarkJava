@@ -34,12 +34,12 @@ import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.JRException;
-import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.export.JRPdfExporter;
+import net.sf.jasperreports.engine.util.JRLoader;
 import net.sf.jasperreports.export.SimpleExporterInput;
 import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
 import oshi.SystemInfo;
@@ -200,15 +200,12 @@ public class Reporte {
         try {
 
             InputStream logoSistema = getClass()
-                    .getResourceAsStream("/com/HenrrySS/benchmarkmaven/resources/benchmarking.png");
-
-            // Ruta del archivo JRXML
-            String userDir = System.getProperty("user.dir");
-            String jrxmlFilePath = "\\src\\main\\java\\com\\HenrrySS\\benchmarkmaven\\resources\\ReporteJasper\\ReporteBenchmark.jrxml";
+                    .getResourceAsStream("/com/HenrrySS/benchmarkmaven/resources/benchmarking.png"),
+                    resporteJasper = getClass()
+                            .getResourceAsStream("/com/HenrrySS/benchmarkmaven/resources/ReporteJasper/ReporteBenchmark.jasper"); // Ruta del archivo JRXML
 
             // Compilar el archivo JRXML en un objeto JasperReport
-            JasperReport jasper = JasperCompileManager.compileReport(userDir + jrxmlFilePath);
-            // JasperReport jasper = (JasperReport)JRLoader.loadObject(reporteJasper);
+            JasperReport jasper = (JasperReport) JRLoader.loadObject(resporteJasper);
             Map<String, Object> parameters = new HashMap<String, Object>();
             parameters.put("logosistema", logoSistema);
             // Obtener datos (puedes reemplazar esto con tus propios datos o usar
