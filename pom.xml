@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.HenrrySS</groupId>
     <artifactId>Benchmark</artifactId>
-    <version>3.0</version>
+    <version>3.5</version>
     <packaging>jar</packaging>
     <build>
         <plugins>
@@ -30,6 +30,19 @@
             <artifactId>oshi-core</artifactId>
             <version>6.4.11</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports -->
+        <dependency>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports</artifactId>
+            <version>6.21.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports-fonts -->
+        <dependency>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports-fonts</artifactId>
+            <version>6.21.2</version>
+        </dependency>
+
 
     </dependencies>
 </project>

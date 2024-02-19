@@ -48,12 +48,12 @@ public class JDReporte extends javax.swing.JDialog {
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        jLabel36 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
+        lblSistemaOperativo = new javax.swing.JLabel();
+        lblArquitectura = new javax.swing.JLabel();
+        lblParches = new javax.swing.JLabel();
+        lblFabricanteSO = new javax.swing.JLabel();
+        lblVersionSO = new javax.swing.JLabel();
+        lblTiempoEncendido = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
         jLabel53 = new javax.swing.JLabel();
         jLabel54 = new javax.swing.JLabel();
@@ -61,12 +61,12 @@ public class JDReporte extends javax.swing.JDialog {
         jLabel56 = new javax.swing.JLabel();
         jLabel57 = new javax.swing.JLabel();
         jLabel58 = new javax.swing.JLabel();
-        jLabel60 = new javax.swing.JLabel();
-        jLabel61 = new javax.swing.JLabel();
-        jLabel62 = new javax.swing.JLabel();
-        jLabel63 = new javax.swing.JLabel();
-        jLabel64 = new javax.swing.JLabel();
-        jLabel65 = new javax.swing.JLabel();
+        lblFabricanteCPU = new javax.swing.JLabel();
+        lblModeloCPU = new javax.swing.JLabel();
+        lblDescripcionCPU = new javax.swing.JLabel();
+        lblSockets = new javax.swing.JLabel();
+        lblCPUFisicas = new javax.swing.JLabel();
+        lblCPULogico = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
@@ -74,12 +74,12 @@ public class JDReporte extends javax.swing.JDialog {
         jLabel42 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
-        jLabel49 = new javax.swing.JLabel();
-        jLabel50 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        jLabel85 = new javax.swing.JLabel();
+        lblRAMTotal = new javax.swing.JLabel();
+        lblRAMUsada = new javax.swing.JLabel();
+        lblRAMDisponible = new javax.swing.JLabel();
+        lblSWAPTotal = new javax.swing.JLabel();
+        lblSWAPUsada = new javax.swing.JLabel();
+        lblMemoriaRAM = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         jLabel59 = new javax.swing.JLabel();
@@ -90,16 +90,17 @@ public class JDReporte extends javax.swing.JDialog {
         jLabel72 = new javax.swing.JLabel();
         jLabel73 = new javax.swing.JLabel();
         jLabel74 = new javax.swing.JLabel();
-        jLabel75 = new javax.swing.JLabel();
-        jLabel76 = new javax.swing.JLabel();
-        jLabel77 = new javax.swing.JLabel();
-        jLabel78 = new javax.swing.JLabel();
-        jLabel79 = new javax.swing.JLabel();
-        jLabel80 = new javax.swing.JLabel();
-        jLabel81 = new javax.swing.JLabel();
-        jLabel82 = new javax.swing.JLabel();
+        lblQuickms = new javax.swing.JLabel();
+        lblMultMatms = new javax.swing.JLabel();
+        lblPermutacionms = new javax.swing.JLabel();
+        lblCribas = new javax.swing.JLabel();
+        lblTOTALms = new javax.swing.JLabel();
+        lblQuicks = new javax.swing.JLabel();
+        lblMultMats = new javax.swing.JLabel();
+        lblPermutacions = new javax.swing.JLabel();
         jLabel83 = new javax.swing.JLabel();
-        jLabel84 = new javax.swing.JLabel();
+        lblTOTALs = new javax.swing.JLabel();
+        btnGenerarReporte = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Reporte");
@@ -120,7 +121,8 @@ public class JDReporte extends javax.swing.JDialog {
             .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sistema", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14), new java.awt.Color(0, 51, 204))); // NOI18N
+        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sistema", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14), new java.awt.Color(51, 51, 255))); // NOI18N
+        jPanel8.setPreferredSize(new java.awt.Dimension(366, 168));
 
         jLabel25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel25.setText("Sistema Operativo:");
@@ -140,23 +142,25 @@ public class JDReporte extends javax.swing.JDialog {
         jLabel31.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel31.setText("Encendido durante:");
 
-        jLabel32.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel32.setText("Microsoft Windows 10");
+        lblSistemaOperativo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblSistemaOperativo.setText("lblSistemaOperativo");
 
-        jLabel34.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel34.setText("Microsoft Windows 10");
+        lblArquitectura.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblArquitectura.setText("lblArquitectura");
 
-        jLabel35.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel35.setText("Microsoft Windows 10");
+        lblParches.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblParches.setText("lblParches");
 
-        jLabel36.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel36.setText("Microsoft Windows 10");
+        lblFabricanteSO.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblFabricanteSO.setText("lblFabricanteSO");
 
-        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel37.setText("Microsoft Windows 10");
+        lblVersionSO.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblVersionSO.setText("lblVersionSO");
+        lblVersionSO.setToolTipText("");
 
-        jLabel38.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel38.setText("14 dias, 18 horas,59 minutos, 59 segundos");
+        lblTiempoEncendido.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblTiempoEncendido.setText("lblTiempoEncendido");
+        lblTiempoEncendido.setToolTipText("");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -173,13 +177,13 @@ public class JDReporte extends javax.swing.JDialog {
                     .addComponent(jLabel27))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel32)
-                    .addComponent(jLabel34)
-                    .addComponent(jLabel35)
-                    .addComponent(jLabel36)
-                    .addComponent(jLabel37)
-                    .addComponent(jLabel38))
-                .addContainerGap())
+                    .addComponent(lblSistemaOperativo)
+                    .addComponent(lblArquitectura)
+                    .addComponent(lblParches)
+                    .addComponent(lblFabricanteSO)
+                    .addComponent(lblVersionSO)
+                    .addComponent(lblTiempoEncendido))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -187,31 +191,34 @@ public class JDReporte extends javax.swing.JDialog {
                 .addContainerGap()
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel25)
-                    .addComponent(jLabel32))
+                    .addComponent(lblSistemaOperativo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel27)
-                    .addComponent(jLabel34))
+                    .addComponent(lblArquitectura))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel28)
-                    .addComponent(jLabel35))
+                    .addComponent(lblParches))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel29)
-                    .addComponent(jLabel36))
+                    .addComponent(lblFabricanteSO))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel30)
-                    .addComponent(jLabel37))
+                    .addComponent(lblVersionSO))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel31)
-                    .addComponent(jLabel38))
+                    .addComponent(lblTiempoEncendido))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "CPU", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 13), new java.awt.Color(0, 0, 204))); // NOI18N
+        lblParches.getAccessibleContext().setAccessibleDescription("");
+
+        jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "CPU", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14), new java.awt.Color(0, 51, 255))); // NOI18N
+        jPanel11.setPreferredSize(new java.awt.Dimension(366, 168));
 
         jLabel53.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel53.setText("Fabricante:");
@@ -229,25 +236,26 @@ public class JDReporte extends javax.swing.JDialog {
         jLabel57.setText("CPUs físicas:");
 
         jLabel58.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel58.setText("CPUs Lógicos:");
+        jLabel58.setText("CPUs lógicos:");
 
-        jLabel60.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel60.setText("Microsoft Windows 10");
+        lblFabricanteCPU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblFabricanteCPU.setText("lblFabricanteCPU");
 
-        jLabel61.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel61.setText("Microsoft Windows 10");
+        lblModeloCPU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblModeloCPU.setText("lblModeloCPU");
 
-        jLabel62.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel62.setText("Microsoft Windows 10");
+        lblDescripcionCPU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblDescripcionCPU.setText("lblDescripcionCPU");
 
-        jLabel63.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel63.setText("Microsoft Windows 10");
+        lblSockets.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblSockets.setText("lblSockets");
 
-        jLabel64.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel64.setText("Microsoft Windows 10");
+        lblCPUFisicas.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblCPUFisicas.setText("lblCPUFisicas");
+        lblCPUFisicas.setToolTipText("");
 
-        jLabel65.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel65.setText("14 dias, 18 horas,59 minutos, 59 segundos");
+        lblCPULogico.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblCPULogico.setText("lblCPULogico");
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -264,13 +272,13 @@ public class JDReporte extends javax.swing.JDialog {
                     .addComponent(jLabel53))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel60)
-                    .addComponent(jLabel61)
-                    .addComponent(jLabel62)
-                    .addComponent(jLabel63)
-                    .addComponent(jLabel64)
-                    .addComponent(jLabel65))
-                .addContainerGap())
+                    .addComponent(lblFabricanteCPU)
+                    .addComponent(lblModeloCPU)
+                    .addComponent(lblDescripcionCPU)
+                    .addComponent(lblSockets)
+                    .addComponent(lblCPUFisicas)
+                    .addComponent(lblCPULogico))
+                .addContainerGap(130, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -278,38 +286,33 @@ public class JDReporte extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel53)
-                    .addComponent(jLabel60))
+                    .addComponent(lblFabricanteCPU))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel54)
-                    .addComponent(jLabel61))
+                    .addComponent(lblModeloCPU))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel55)
-                    .addComponent(jLabel62))
+                    .addComponent(lblDescripcionCPU))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel56)
-                    .addComponent(jLabel63))
+                    .addComponent(lblSockets))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel57)
-                    .addComponent(jLabel64))
+                    .addComponent(lblCPUFisicas))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel58)
-                    .addComponent(jLabel65))
+                    .addComponent(lblCPULogico))
                 .addGap(6, 6, 6))
         );
 
-        jLabel60.getAccessibleContext().setAccessibleName("Etiqueta");
-        jLabel61.getAccessibleContext().setAccessibleName("Etiqueta");
-        jLabel62.getAccessibleContext().setAccessibleName("Etiqueta");
-        jLabel63.getAccessibleContext().setAccessibleName("Etiqueta");
-        jLabel64.getAccessibleContext().setAccessibleName("Etiqueta");
-        jLabel65.getAccessibleContext().setAccessibleName("Etiqueta");
+        lblCPULogico.getAccessibleContext().setAccessibleDescription("");
 
-        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Memoria", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 13), new java.awt.Color(0, 0, 204))); // NOI18N
+        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Memoria", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14), new java.awt.Color(0, 51, 255))); // NOI18N
 
         jLabel39.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel39.setText("Memoria RAM:");
@@ -329,23 +332,27 @@ public class JDReporte extends javax.swing.JDialog {
         jLabel44.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel44.setText("Memoria SWAP usada:");
 
-        jLabel47.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel47.setText("jLabel47");
+        lblRAMTotal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblRAMTotal.setText("lblRAMTotal");
 
-        jLabel48.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel48.setText("jLabel48");
+        lblRAMUsada.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblRAMUsada.setText("lblRAMUsada");
 
-        jLabel49.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel49.setText("jLabel49");
+        lblRAMDisponible.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblRAMDisponible.setText("lblRAMDisponible");
+        lblRAMDisponible.setToolTipText("");
 
-        jLabel50.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel50.setText("jLabel50");
+        lblSWAPTotal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblSWAPTotal.setText("lblSWAPTotal");
+        lblSWAPTotal.setToolTipText("");
 
-        jLabel51.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel51.setText("jLabel51");
+        lblSWAPUsada.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblSWAPUsada.setText("lblSWAPUsada");
+        lblSWAPUsada.setToolTipText("");
 
-        jLabel85.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel85.setText("jLabel85");
+        lblMemoriaRAM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblMemoriaRAM.setText("lblMemoriaRAM");
+        lblMemoriaRAM.setToolTipText("");
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -363,12 +370,12 @@ public class JDReporte extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel48, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel47)
-                        .addComponent(jLabel49)
-                        .addComponent(jLabel50)
-                        .addComponent(jLabel51))
-                    .addComponent(jLabel85))
+                        .addComponent(lblRAMUsada, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblRAMTotal)
+                        .addComponent(lblRAMDisponible)
+                        .addComponent(lblSWAPTotal)
+                        .addComponent(lblSWAPUsada))
+                    .addComponent(lblMemoriaRAM))
                 .addContainerGap())
         );
         jPanel10Layout.setVerticalGroup(
@@ -377,37 +384,39 @@ public class JDReporte extends javax.swing.JDialog {
                 .addContainerGap()
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel39)
-                    .addComponent(jLabel85))
+                    .addComponent(lblMemoriaRAM))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel40)
-                    .addComponent(jLabel47))
+                    .addComponent(lblRAMTotal))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel41)
-                    .addComponent(jLabel48))
+                    .addComponent(lblRAMUsada))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel42)
-                    .addComponent(jLabel49))
+                    .addComponent(lblRAMDisponible))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel43)
-                    .addComponent(jLabel50))
+                    .addComponent(lblSWAPTotal))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel44)
-                    .addComponent(jLabel51))
+                    .addComponent(lblSWAPUsada))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Rendimiento", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14), new java.awt.Color(0, 0, 255))); // NOI18N
+        lblRAMTotal.getAccessibleContext().setAccessibleDescription("");
+
+        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Rendimiento", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14), new java.awt.Color(0, 51, 255))); // NOI18N
 
         jLabel59.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel59.setText("Quicksort 1000 elementos");
+        jLabel59.setText("Quicksort 1000000  elementos");
 
         jLabel66.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel66.setText("Multiplicacición Matrices");
+        jLabel66.setText("Multiplicación Matrices");
 
         jLabel69.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel69.setText("Permutaciones");
@@ -434,55 +443,62 @@ public class JDReporte extends javax.swing.JDialog {
         jLabel74.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel74.setText("Segundos (s)");
 
-        jLabel75.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel75.setForeground(new java.awt.Color(0, 102, 0));
-        jLabel75.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel75.setText("jLabel75");
+        lblQuickms.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblQuickms.setForeground(new java.awt.Color(0, 102, 0));
+        lblQuickms.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblQuickms.setText("lblQuickms");
 
-        jLabel76.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel76.setForeground(new java.awt.Color(0, 102, 0));
-        jLabel76.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel76.setText("jLabel76");
+        lblMultMatms.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblMultMatms.setForeground(new java.awt.Color(0, 102, 0));
+        lblMultMatms.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblMultMatms.setText("lblMultMatms");
 
-        jLabel77.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel77.setForeground(new java.awt.Color(0, 102, 0));
-        jLabel77.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel77.setText("jLabel77");
+        lblPermutacionms.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblPermutacionms.setForeground(new java.awt.Color(0, 102, 0));
+        lblPermutacionms.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPermutacionms.setText("lblPermutacionms");
+        lblPermutacionms.setToolTipText("");
 
-        jLabel78.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel78.setForeground(new java.awt.Color(0, 102, 0));
-        jLabel78.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel78.setText("jLabel78");
+        lblCribas.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblCribas.setForeground(new java.awt.Color(0, 102, 0));
+        lblCribas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblCribas.setText("lblCribams");
+        lblCribas.setToolTipText("");
 
-        jLabel79.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jLabel79.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel79.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel79.setText("jLabel79");
+        lblTOTALms.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        lblTOTALms.setForeground(new java.awt.Color(204, 0, 0));
+        lblTOTALms.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTOTALms.setText("lblTOTALms");
+        lblTOTALms.setToolTipText("");
 
-        jLabel80.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel80.setForeground(new java.awt.Color(0, 0, 153));
-        jLabel80.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel80.setText("jLabel80");
+        lblQuicks.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblQuicks.setForeground(new java.awt.Color(0, 0, 153));
+        lblQuicks.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblQuicks.setText("lblQuicks");
 
-        jLabel81.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel81.setForeground(new java.awt.Color(0, 0, 153));
-        jLabel81.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel81.setText("jLabel81");
+        lblMultMats.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblMultMats.setForeground(new java.awt.Color(0, 0, 153));
+        lblMultMats.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblMultMats.setText("lblMultMats");
+        lblMultMats.setToolTipText("");
 
-        jLabel82.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel82.setForeground(new java.awt.Color(0, 0, 153));
-        jLabel82.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel82.setText("jLabel82");
+        lblPermutacions.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblPermutacions.setForeground(new java.awt.Color(0, 0, 153));
+        lblPermutacions.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPermutacions.setText("lblPermutacions");
+        lblPermutacions.setToolTipText("");
 
         jLabel83.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel83.setForeground(new java.awt.Color(0, 0, 153));
         jLabel83.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel83.setText("jLabel83");
+        jLabel83.setText("lblCribas");
+        jLabel83.setToolTipText("");
 
-        jLabel84.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jLabel84.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel84.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel84.setText("jLabel84");
+        lblTOTALs.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        lblTOTALs.setForeground(new java.awt.Color(204, 0, 0));
+        lblTOTALs.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTOTALs.setText("lblTOTALs");
+        lblTOTALs.setToolTipText("");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -497,22 +513,22 @@ public class JDReporte extends javax.swing.JDialog {
                     .addComponent(jLabel70, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel69, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel66, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel77, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel76, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel75, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblPermutacionms, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblMultMatms, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblQuickms, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel73, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
-                    .addComponent(jLabel78, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel79, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lblCribas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblTOTALms, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel74, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
-                    .addComponent(jLabel80, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel81, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel82, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblQuicks, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblMultMats, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblPermutacions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel83, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel84, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lblTOTALs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
@@ -526,30 +542,38 @@ public class JDReporte extends javax.swing.JDialog {
                 .addGap(20, 20, 20)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel59)
-                    .addComponent(jLabel75)
-                    .addComponent(jLabel80))
+                    .addComponent(lblQuickms)
+                    .addComponent(lblQuicks))
                 .addGap(14, 14, 14)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel66)
-                    .addComponent(jLabel76)
-                    .addComponent(jLabel81))
+                    .addComponent(lblMultMatms)
+                    .addComponent(lblMultMats))
                 .addGap(14, 14, 14)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel69)
-                    .addComponent(jLabel77)
-                    .addComponent(jLabel82))
+                    .addComponent(lblPermutacionms)
+                    .addComponent(lblPermutacions))
                 .addGap(11, 11, 11)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel70)
-                    .addComponent(jLabel78)
+                    .addComponent(lblCribas)
                     .addComponent(jLabel83))
                 .addGap(14, 14, 14)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel71)
-                    .addComponent(jLabel79)
-                    .addComponent(jLabel84))
+                    .addComponent(lblTOTALms)
+                    .addComponent(lblTOTALs))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
+
+        lblQuicks.getAccessibleContext().setAccessibleDescription("");
+
+        btnGenerarReporte.setBackground(new java.awt.Color(242, 242, 242));
+        btnGenerarReporte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/HenrrySS/benchmarkmaven/resources/pdfdown.png"))); // NOI18N
+        btnGenerarReporte.setToolTipText("");
+        btnGenerarReporte.setBorder(null);
+        btnGenerarReporte.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -558,13 +582,19 @@ public class JDReporte extends javax.swing.JDialog {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(365, 365, 365)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(146, 146, 146)
+                .addComponent(btnGenerarReporte, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(146, 146, 146))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 12, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addComponent(btnGenerarReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -646,6 +676,7 @@ public class JDReporte extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnGenerarReporte;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel27;
@@ -653,23 +684,12 @@ public class JDReporte extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
-    public javax.swing.JLabel jLabel32;
-    public javax.swing.JLabel jLabel34;
-    public javax.swing.JLabel jLabel35;
-    public javax.swing.JLabel jLabel36;
-    public javax.swing.JLabel jLabel37;
-    public javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
-    public javax.swing.JLabel jLabel47;
-    public javax.swing.JLabel jLabel48;
-    public javax.swing.JLabel jLabel49;
-    public javax.swing.JLabel jLabel50;
-    public javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
@@ -677,12 +697,6 @@ public class JDReporte extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
-    public javax.swing.JLabel jLabel60;
-    public javax.swing.JLabel jLabel61;
-    public javax.swing.JLabel jLabel62;
-    public javax.swing.JLabel jLabel63;
-    public javax.swing.JLabel jLabel64;
-    public javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel70;
@@ -690,22 +704,39 @@ public class JDReporte extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
-    public javax.swing.JLabel jLabel75;
-    public javax.swing.JLabel jLabel76;
-    public javax.swing.JLabel jLabel77;
-    public javax.swing.JLabel jLabel78;
-    public javax.swing.JLabel jLabel79;
-    public javax.swing.JLabel jLabel80;
-    public javax.swing.JLabel jLabel81;
-    public javax.swing.JLabel jLabel82;
     public javax.swing.JLabel jLabel83;
-    public javax.swing.JLabel jLabel84;
-    public javax.swing.JLabel jLabel85;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    public javax.swing.JLabel lblArquitectura;
+    public javax.swing.JLabel lblCPUFisicas;
+    public javax.swing.JLabel lblCPULogico;
+    public javax.swing.JLabel lblCribas;
+    public javax.swing.JLabel lblDescripcionCPU;
+    public javax.swing.JLabel lblFabricanteCPU;
+    public javax.swing.JLabel lblFabricanteSO;
+    public javax.swing.JLabel lblMemoriaRAM;
+    public javax.swing.JLabel lblModeloCPU;
+    public javax.swing.JLabel lblMultMatms;
+    public javax.swing.JLabel lblMultMats;
+    public javax.swing.JLabel lblParches;
+    public javax.swing.JLabel lblPermutacionms;
+    public javax.swing.JLabel lblPermutacions;
+    public javax.swing.JLabel lblQuickms;
+    public javax.swing.JLabel lblQuicks;
+    public javax.swing.JLabel lblRAMDisponible;
+    public javax.swing.JLabel lblRAMTotal;
+    public javax.swing.JLabel lblRAMUsada;
+    public javax.swing.JLabel lblSWAPTotal;
+    public javax.swing.JLabel lblSWAPUsada;
+    public javax.swing.JLabel lblSistemaOperativo;
+    public javax.swing.JLabel lblSockets;
+    public javax.swing.JLabel lblTOTALms;
+    public javax.swing.JLabel lblTOTALs;
+    public javax.swing.JLabel lblTiempoEncendido;
+    public javax.swing.JLabel lblVersionSO;
     // End of variables declaration//GEN-END:variables
 }
